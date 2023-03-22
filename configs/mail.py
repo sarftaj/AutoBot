@@ -2,6 +2,8 @@ import smtplib
 
 #info
 print("--------------------------")
+
+#put your own app password here
 password = "gfnaoaftdbdwmydy"
 message = "test"
 
