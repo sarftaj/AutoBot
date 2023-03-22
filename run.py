@@ -15,15 +15,15 @@ print("---------------------------------------------------------------------")
 
 if c == "1":
     print("Welcome to Prolific!")
-    subprocess.run(["python", "D:\Auto\prolific.py"])
+    subprocess.run(["python", "D:\Auto\configs\prolific.py"])
 if c == "2":
     print("Welcome to Youtube!")
-    subprocess.run(["python", "D:\Auto\config1-youtube.py"])
+    subprocess.run(["python", "D:\Auto\configs\config1-youtube.py"])
 if c == "3":
     print("Welcome to the mail spammer")
-    subprocess.run(["python", "D:\Auto\mail.py"])
+    subprocess.run(["python", "D:\Auto\configs\mail.py"])
 if c == "4":
     print("Welcome to swagbucks script")
     print("---------------------------------------------------------------------")
-    subprocess.run(["python", "D:\Auto\swagbucks_script.py"])
+    subprocess.run(["python", "D:\Auto\configs\swagbucks_script.py"])
 

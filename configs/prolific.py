@@ -9,8 +9,8 @@ import time
 import os
 
 #set user and pass
-website1_user = "tannerbanta923@gmail.com"
-website1_pass = "Tbanta8197@"
+website1_user = "email"
+website1_pass = "pass"
 
 
 #setup with user files
