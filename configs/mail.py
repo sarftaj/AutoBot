@@ -3,7 +3,7 @@ import smtplib
 #info
 print("--------------------------")
 password = "gfnaoaftdbdwmydy"
-message = "nigger"
+message = "test"
 
 rec = input("email to spam: ")
 
