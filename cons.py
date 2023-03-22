@@ -7,17 +7,21 @@ from webdriver_manager.core import driver
 
 
 
-#Prolific User and pass
+#Prolific cons
+
+user = ""
+passw = ""
 
 
 
 
-#youtube file locations
 
 
+#youtube cons
+filename1 = ""
+convertfile1 = ""
+filelocation1 = ""
 
-#prolific Constants
-#soup extraction
 
 
 
