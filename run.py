@@ -34,6 +34,7 @@ if c == "4":
     print("---------------------------------------------------------------------")
     subprocess.run(["python", "D:\Auto\configs\swagbucks_script.py"])
 if c == "5":
+    #page 2 items
     c2 = input("PAGE 2: (ENTER NUMBER FOR SELECTION) "
            "\n 1.Testing "
            "\n 2.Testing "

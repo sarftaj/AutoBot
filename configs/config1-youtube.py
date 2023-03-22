@@ -8,8 +8,8 @@ import cons
 def cls():
     os.system('cls' if os.name == 'nt' else 'clear')
 
+#print screen
 
-cls()
 print("-------------------------------")
 print("Welcome to Youtube Downloader!")
 
