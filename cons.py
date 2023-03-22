@@ -9,8 +9,7 @@ from webdriver_manager.core import driver
 
 #Prolific User and pass
 
-website1_user = "tannerbanta923@gmail.com"
-website1_pass = "Tbanta8197@"
+
 
 
 #youtube file locations
