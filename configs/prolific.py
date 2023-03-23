@@ -7,10 +7,19 @@ from selenium.webdriver.common.by import By
 import requests
 import time
 import os
+import prolificinfo
+
+if os.name == 'posix':  # Unix/Linux/MacOS
+    os.system('clear')
+
+
+
+
+
+
 
 #set user and pass
-website1_user = "email"
-website1_pass = "pass"
+
 
 
 #setup with user files
@@ -28,12 +37,12 @@ user = driver.find_element (by="xpath", value='//*[@id="id_username"]')
 user.click()
 
 #user sign in - username
-user.send_keys(website1_user)
+user.send_keys(prolificinfo.website1_user)
 password = driver.find_element (by="xpath", value='//*[@id="loginForm"]/div[3]/div/div/input')
 password.click()
 
 #user sign in - password
-password.send_keys(website1_pass)
+password.send_keys(prolificinfo.website1_pass)
 
 #click login
 click1 = driver.find_element(by="xpath", value='//*[@id="login"]')
@@ -49,14 +58,35 @@ click1.click()
 
 
 wait = input("enter yes when ready to start: ")
-
+os.system('cls')
 
 
 
 #main 1
 
-# Make a request to the website
 
+def get_score(title):
+    """Computes a score for a survey title."""
+    # In this example, the score is based on the length of the title
+    return len(title)
+
+# Find the best $
+html_content = driver.page_source
+soup = BeautifulSoup(html_content, 'html.parser')
+highest_elem = None
+highest_score = float('-inf')
+for study_elem in soup.find_all('div', class_="tags"):
+    title = study_elem.text.strip()
+    score = get_score(title)  # define a function to compute the score for a survey title
+    if score > highest_score:
+        highest_elem = study_elem
+        highest_score = score
+        print(highest_elem.text, "highest paying survey")
+        print("---------------------------------------------------------------------")
+        os.system('cls')
+
+
+        driver.implicitly_wait(5)
 
 
 
