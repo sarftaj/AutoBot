@@ -21,6 +21,7 @@ if c == "1":
     print("Welcome to Prolific!")
     "---------------------------------------------------------------------"
     subprocess.run(["python", "D:\Auto\configs\prolific.py"])
+
 if c == "2":
     print("Welcome to Youtube!")
     "---------------------------------------------------------------------"
@@ -32,7 +33,7 @@ if c == "3":
 if c == "4":
     print("Welcome to swagbucks script")
     print("---------------------------------------------------------------------")
-    subprocess.run(["python", "D:\Auto\configs\swagbucks_script.py"])
+    subprocess.run(["python", "D:\Auto\run.py"])
 if c == "5":
     #page 2 items
     c2 = input("PAGE 2: (ENTER NUMBER FOR SELECTION) "

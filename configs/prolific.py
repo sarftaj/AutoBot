@@ -1,3 +1,5 @@
+import subprocess
+
 import selenium
 import cons
 from bs4 import BeautifulSoup
@@ -84,7 +86,9 @@ for study_elem in soup.find_all('div', class_="tags"):
         print(highest_elem.text, "highest paying survey")
         print("---------------------------------------------------------------------")
         os.system('cls')
-
+        print("program done for now... ")
+        print("going back to start")
+        subprocess.run(["python", "D:\Auto\configs\swagbucks_script.py"])
 
         driver.implicitly_wait(5)
 
