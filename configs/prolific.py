@@ -12,20 +12,20 @@ import prolificinfo
 if os.name == 'posix':  # Unix/Linux/MacOS
     os.system('clear')
 
+#to use auto sign in make another .py named prolificinfo.py then put website1_user and pass in there
 
 
 
 
 
 
-#set user and pass
 
 
 
 #setup with user files
 ser = Service(r"D:\chromedriver.exe")
-op = webdriver.ChromeOptions ()
-driver = webdriver.Chrome (service=ser, options=op)
+op = webdriver.ChromeOptions()
+driver = webdriver.Chrome(service=ser, options=op)
 
 
 #website url
@@ -33,12 +33,12 @@ driver.get("https://internal-api.prolific.co/auth/accounts/login/")
 
 
 #user driver
-user = driver.find_element (by="xpath", value='//*[@id="id_username"]')
+user = driver.find_element(by="xpath", value='//*[@id="id_username"]')
 user.click()
 
 #user sign in - username
 user.send_keys(prolificinfo.website1_user)
-password = driver.find_element (by="xpath", value='//*[@id="loginForm"]/div[3]/div/div/input')
+password = driver.find_element(by="xpath", value='//*[@id="loginForm"]/div[3]/div/div/input')
 password.click()
 
 #user sign in - password
