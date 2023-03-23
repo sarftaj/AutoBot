@@ -59,7 +59,7 @@ click1 = driver.find_element(by="xpath", value='//*[@id="klaro"]/div/div/div[2]/
 click1.click()
 
 
-wait = input("enter yes when ready to start: ")
+wait = input("enter any key when the page opens : ")
 os.system('cls')
 
 
@@ -88,9 +88,9 @@ for study_elem in soup.find_all('div', class_="tags"):
         os.system('cls')
         print("program done for now... ")
         print("going back to start")
-        subprocess.run(["python", "D:\Auto\configs\swagbucks_script.py"])
 
-        driver.implicitly_wait(5)
+
+
 
 
 

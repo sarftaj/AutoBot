@@ -19,6 +19,7 @@ print("---------------------------------------------------------------------")
 #input 1 decisions
 if c == "1":
     print("Welcome to Prolific!")
+    1
     "---------------------------------------------------------------------"
     subprocess.run(["python", "D:\Auto\configs\prolific.py"])
 
