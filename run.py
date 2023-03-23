@@ -14,7 +14,7 @@ c = input("Which website would you like to use: (ENTER NUMBER FOR SELECTION) "
            "\n 5. PAGE 2              "       
            "\n PUT NUMBER HERE: ")
 print("---------------------------------------------------------------------")
-
+print("---------------------------------------------------------------------")
 
 #input 1 decisions
 if c == "1":
