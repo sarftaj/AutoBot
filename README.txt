@@ -16,9 +16,7 @@ mail - faster
 
 
 youtube - youtube to mp4 download to folder
-
-convert mp4 to mp3
-
+youtube - convert mp4 to mp3
 
 WIP - convert mp4 to any file
 WIP - download video or audio
