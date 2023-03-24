@@ -3,7 +3,7 @@ import os
 from moviepy.editor import *
 import time
 import cons
-
+import AudioConverter 
 
 def cls():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -48,14 +48,18 @@ if video1 == "1":
 
     #mp3 converter
     if video2 == "1":
-        video = input("Put video file path here")
-        video = VideoFileClip(video)
-        video.audio.write_audiofile("downloadvideos/convertvideoaudio")
+        video = input("Put video file path here: ")
+        videoint = (video)
+        videoex = VideoFileClip(videoint)
+        videomp3 = input("name of extract file")
+        video.audio.write_audiofile(videomp3)
 
 
-
-
-
+    #wav converter
+    if video2 == "2":
+        wav1 = input("Path to file to extract: ")
+        wav2 = (wav1)
+        audioconvert convert input/ output/ --output-format .mp3
 
 
 
