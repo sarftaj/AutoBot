@@ -59,7 +59,7 @@ if video1 == "1":
     if video2 == "2":
         wav1 = input("Path to file to extract: ")
         wav2 = (wav1)
-        audioconvert convert input/ output/ --output-format .mp3
+
 
 
 
