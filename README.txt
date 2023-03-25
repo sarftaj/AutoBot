@@ -14,7 +14,7 @@ WIP - prolific deep learning
 mail - semi auto spammer (only gmail for sender - works for any email)
 mail - ADDED 2 templates and custom input for sending
 mail - faster
-
+mail - infinite or single use
 
 youtube - youtube to mp4 download to folder
 youtube - convert mp4 to mp3
