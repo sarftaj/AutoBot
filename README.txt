@@ -2,6 +2,8 @@ run.py to run script
 
 AutoBot 0.5- 
 
+PROLIFIC -
+
 prolific - auto sign in
 prolific - auto balance 
 prolific - find best survey
@@ -11,10 +13,17 @@ WIP - prolific basic auto survey bot
 WIP - prolific deep learning
 
 
+MAIL -
+
 mail - semi auto spammer (only gmail for sender - works for any email)
 mail - ADDED 2 templates and custom input for sending
 mail - faster
 mail - infinite or single use
+
+WIP - open multiple scripts at once for better spam 
+
+
+YOUTUBE -
 
 youtube - youtube to mp4 download to folder
 youtube - convert mp4 to mp3
