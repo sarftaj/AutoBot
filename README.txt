@@ -22,3 +22,4 @@ youtube - convert mp4 to mp3
 WIP - convert mp4 to any file
 WIP - download video or audio
 WIP - view/watch time bot
+WIP - change resolution from high to low with easy keybind or num press
