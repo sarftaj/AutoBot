@@ -74,7 +74,7 @@ if lookforsurveymain == "1":
         if lookforsur == "1":
             #remap keys for error fix #1 *(already in survey when website loaded)
             start4 = driver.find_element("xpath", value='//*[@id="app"]/div[2]/div[2]/div/div/section[2]/div/div[4]/button[4]').click()
-            start6 = driver.find_element ("xpath", value='//*[@id="app"]/div[2]/div[2]/div/div/section[2]/div/div[3]/button[4]').click ()
+            start6 = driver.find_element ("xpath", value='//*[@id="app"]/div[2]/div[2]/div/div/section[2]/div/div[3]/button[4]').click()
             #needs finished (start study)
 
 
@@ -90,6 +90,27 @@ if lookforsurveymain == "2":
     print("moving on...")
 
 print("---------------------------------------------------------------------")
+
+
+#goes to highest to lowest
+preset1 = input(""""Which preset for study?
+[1] - Reward (Highest to lowest)
+[2] - Time (shortest to longest)
+[3] - Neither
+
+""")
+
+if preset1 == "1":
+    pres1 = driver.find_element("xpath", value='//*[@id="el-id-578-13"]').click()
+    time.sleep(5)
+    pres2 = driver.find_element("xpath", value='//*[@id="el-id-578-6"]/div/div/div[1]/ul/li[2]').click()
+
+
+
+
+
+if preset1 == "2":
+    print("WIP")
 
 
 

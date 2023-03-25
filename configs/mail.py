@@ -1,6 +1,5 @@
 import smtplib
 import os
-
 from extra import mailpresets
 import subprocess
 
@@ -9,8 +8,12 @@ if os.name == 'posix':  # Unix/Linux/MacOS
     os.system('clear')
 
 
-
-
+mailai = input("Would you like to use ai to write your email?: "
+               "\n [1] Y"
+               "\n [2] N"
+               "\n  : ")
+if mailai == "1":
+    subprocess.run (["python", "D:\Auto\extra\mailai.py"])
 
 
 
@@ -69,3 +72,4 @@ if sendquestion == "2":
     s.starttls()
     s.login("savvythepig@gmail.com", password)
     s.sendmail("savvythepig@gmail.com", rec, message1)
+    print("success")
