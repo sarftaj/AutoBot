@@ -1,5 +1,5 @@
 run.py to run script 
-
+wip - gui for run.py with configs
 AutoBot 0.5- 
 
 PROLIFIC -
