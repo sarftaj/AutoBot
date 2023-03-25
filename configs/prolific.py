@@ -1,6 +1,8 @@
 import subprocess
 
 import selenium
+from selenium.webdriver import ActionChains
+
 import cons
 from bs4 import BeautifulSoup
 from selenium import webdriver
@@ -9,7 +11,9 @@ from selenium.webdriver.common.by import By
 import requests
 import time
 import os
-import prolificinfo
+from configs import prolificinfo
+
+
 
 if os.name == 'posix':  # Unix/Linux/MacOS
     os.system('clear')
@@ -63,6 +67,11 @@ wait = input("enter any key when the page opens : ")
 os.system('cls')
 
 
+lookforsurvey = driver.find_element("xpath", value='//*[@id="app"]/div[2]/div/div/div/div/div/div')
+if lookforsurvey:
+    print("no surveys at this moment please wait a little...: ")
+    print("closing program....................................")
+
 
 #main 1
 
@@ -72,12 +81,22 @@ def get_score(title):
     # In this example, the score is based on the length of the title
     return len(title)
 
+
+
+
 # Find the best $
 html_content = driver.page_source
 soup = BeautifulSoup(html_content, 'html.parser')
 highest_elem = None
 highest_score = float('-inf')
-for study_elem in soup.find_all('div', class_="tags"):
+
+
+
+
+
+
+
+for study_elem in soup.find('div', class_="tags"):
     title = study_elem.text.strip()
     score = get_score(title)  # define a function to compute the score for a survey title
     if score > highest_score:
@@ -86,23 +105,31 @@ for study_elem in soup.find_all('div', class_="tags"):
         print(highest_elem.text, "highest paying survey")
         print("---------------------------------------------------------------------")
         os.system('cls')
-        print("program done for now... ")
-        print("going back to start")
 
 
 
+        #starting survey (need to test)
+        botinput = input("Do script for this survey [1] yes [2] no: ")
+        driver.find_element ("xpath",
+                             value='//*[@id="app"]/div[2]/div/div/div/div/div[2]/div[1]/div[3]/button').click()
+        time.sleep(5)
+        #start survey from menu
+        driver.find_element("xpath",
+                             value='//*[@id="app"]/div[2]/div/div/div/section[2]/div/div[3]/div/form/button').click()
+        time.sleep(5)
+        driver.find_element("xpath", value='/html/body/div[5]/div[2]/section/div/label/span/input').click()
 
 
 
+"""change to prolificbot
+if botinput == "1":
+    action = ActionChains(driver)
+    action.click(on_element=highest_elem)
+    action.perform()
+    click2 = driver.find_element("xpath", value='//*[@id="app"]/div[2]/div/div/div/div/div[2]/div[1]/div[3]/button')
+"""
 
-
-
-
-
-
-
-
-
+time.sleep(50)
 
 
 

@@ -1,3 +1,5 @@
+import subprocess
+import os
 
 
 
@@ -37,13 +39,3 @@ Sincerely,
 [ZARF Relates]
 """
 
-mailscript3 = """
-custom script - input here
-
-
-
-
-
-
-
-"""
