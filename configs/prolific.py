@@ -68,14 +68,14 @@ lookforsurveymain = input("are you in a survey already? [1] y [2] n: ")
 
 if lookforsurveymain == "1":
     lookforsurvey = driver.find_element("xpath", value='//*[@id="app"]/div[2]/div[2]/div/div/section[1]').is_displayed()
-    if lookforsurvey == False:
+    if lookforsurvey == True:
         print ("---------------------------------------------------------------------")
-        lookforsur = input("survey already started would you like to go to study? [1] y [2] n : ")
+        lookforsur = input("is study not started yet (does it not show confirm) [1] y [2] n : ")
         if lookforsur == "1":
-            start2 = driver.find_element ("xpath", value='//*[@id="app"]/div[2]/div[2]/div/div/section[2]/div/div[3]/button[4]').click ()
-            start3 = driver.find_element ("xpath", value='/html/body/div[5]/div[2]/section/div/label/span/input').click ()
-            time.sleep(5)
-            start4 = driver.find_element ("xpath", value='/html/body/div[5]/div[2]/section/footer/a').click ()
+            #remap keys for error fix #1 *(already in survey when website loaded)
+            start4 = driver.find_element("xpath", value='//*[@id="app"]/div[2]/div[2]/div/div/section[2]/div/div[4]/button[4]').click()
+            start6 = driver.find_element ("xpath", value='//*[@id="app"]/div[2]/div[2]/div/div/section[2]/div/div[3]/button[4]').click ()
+            #needs finished (start study)
 
 
 
@@ -85,7 +85,7 @@ if lookforsurveymain == "1":
 
 
 
-
+print("---------------------------------------------------------------------")
 if lookforsurveymain == "2":
     print("moving on...")
 
@@ -103,6 +103,9 @@ soup = BeautifulSoup(html_content, 'html.parser')
 highest_elem = None
 highest_score = float('-inf')
 
+
+
+#finds highest paying with time and money calculated
 for study_elem in soup.find('div', class_="tags"):
     title = study_elem.text.strip()
     score = get_score(title)  # define a function to compute the score for a survey title
@@ -115,16 +118,9 @@ for study_elem in soup.find('div', class_="tags"):
 
         #starting survey (need to test)
         botinput = input("Do script for this survey [1] yes [2] no: ")
-        driver.find_element("xpath",
-                             value='//*[@id="app"]/div[2]/div/div/div/div/div[2]/div[1]/div[3]/button').click()
-        time.sleep(5)
-        #start survey from menu
-        driver.find_element("xpath", value='//*[@id="app"]/div[2]/div/div/div/section[2]/div/div[3]/div/form/button').click()
-        time.sleep(5)
-        start1 = driver.find_element("xpath", value='/html/body/div[5]/div[2]/section/div/label/span/input').click()
-        if start1 == False:
-            print("error... trying again")
+        #star survey path
 
+        #needs fully fixed
 
 
 
