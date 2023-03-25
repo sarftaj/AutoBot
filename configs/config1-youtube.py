@@ -48,9 +48,9 @@ if video1 == "1":
 
     #mp3 converter
     if video2 == "1":
+        
         video = input("Put video file path here: ")
-        videoint = (video)
-        videoex = VideoFileClip(videoint)
+        videoex = VideoFileClip(video)
         videomp3 = input("name of extract file")
         video.audio.write_audiofile(videomp3)
 
