@@ -20,14 +20,6 @@ if os.name == 'posix':  # Unix/Linux/MacOS
 
 #to use auto sign in make another .py named prolificinfo.py then put website1_user and pass in there
 
-
-
-
-
-
-
-
-
 #setup with user files
 ser = Service(r"D:\chromedriver.exe")
 op = webdriver.ChromeOptions()
@@ -58,43 +50,58 @@ click1.click()
 print("Logged In, process will start soon...")
 print("---------------------------------------------------------------------")
 
+
+
+#click button after login
 driver.implicitly_wait(5)
 click1 = driver.find_element(by="xpath", value='//*[@id="klaro"]/div/div/div[2]/div/div/div/button[2]')
 click1.click()
 
-
+#wait key to not break process
 wait = input("enter any key when the page opens : ")
+print("---------------------------------------------------------------------")
 os.system('cls')
 
 
-lookforsurvey = driver.find_element("xpath", value='//*[@id="app"]/div[2]/div/div/div/div/div/div')
-if lookforsurvey:
-    print("no surveys at this moment please wait a little...: ")
-    print("closing program....................................")
+#check to see if already in survey (check 1)
+lookforsurveymain = input("are you in a survey already? [1] y [2] n: ")
+
+if lookforsurveymain == "1":
+    lookforsurvey = driver.find_element("xpath", value='//*[@id="app"]/div[2]/div[2]/div/div/section[1]').is_displayed()
+    if lookforsurvey == False:
+        print ("---------------------------------------------------------------------")
+        lookforsur = input("survey already started would you like to go to study? [1] y [2] n : ")
+        if lookforsur == "1":
+            start2 = driver.find_element ("xpath", value='//*[@id="app"]/div[2]/div[2]/div/div/section[2]/div/div[3]/button[4]').click ()
+            start3 = driver.find_element ("xpath", value='/html/body/div[5]/div[2]/section/div/label/span/input').click ()
+            time.sleep(5)
+            start4 = driver.find_element ("xpath", value='/html/body/div[5]/div[2]/section/footer/a').click ()
 
 
-#main 1
 
 
+
+
+
+
+
+
+if lookforsurveymain == "2":
+    print("moving on...")
+
+print("---------------------------------------------------------------------")
+
+
+
+#finds best study in the main menu
 def get_score(title):
     """Computes a score for a survey title."""
     # In this example, the score is based on the length of the title
     return len(title)
-
-
-
-
-# Find the best $
 html_content = driver.page_source
 soup = BeautifulSoup(html_content, 'html.parser')
 highest_elem = None
 highest_score = float('-inf')
-
-
-
-
-
-
 
 for study_elem in soup.find('div', class_="tags"):
     title = study_elem.text.strip()
@@ -106,30 +113,26 @@ for study_elem in soup.find('div', class_="tags"):
         print("---------------------------------------------------------------------")
         os.system('cls')
 
-
-
         #starting survey (need to test)
         botinput = input("Do script for this survey [1] yes [2] no: ")
-        driver.find_element ("xpath",
+        driver.find_element("xpath",
                              value='//*[@id="app"]/div[2]/div/div/div/div/div[2]/div[1]/div[3]/button').click()
         time.sleep(5)
         #start survey from menu
-        driver.find_element("xpath",
-                             value='//*[@id="app"]/div[2]/div/div/div/section[2]/div/div[3]/div/form/button').click()
+        driver.find_element("xpath", value='//*[@id="app"]/div[2]/div/div/div/section[2]/div/div[3]/div/form/button').click()
         time.sleep(5)
-        driver.find_element("xpath", value='/html/body/div[5]/div[2]/section/div/label/span/input').click()
+        start1 = driver.find_element("xpath", value='/html/body/div[5]/div[2]/section/div/label/span/input').click()
+        if start1 == False:
+            print("error... trying again")
 
 
 
-"""change to prolificbot
-if botinput == "1":
-    action = ActionChains(driver)
-    action.click(on_element=highest_elem)
-    action.perform()
-    click2 = driver.find_element("xpath", value='//*[@id="app"]/div[2]/div/div/div/div/div[2]/div[1]/div[3]/button')
-"""
 
-time.sleep(50)
+
+
+
+
+
 
 
 
