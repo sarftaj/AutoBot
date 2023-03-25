@@ -4,7 +4,8 @@ AutoBot 0.5-
 
 prolific - auto sign in
 prolific - auto balance 
-prolific - find best survey 
+prolific - find best survey
+prolific - start survey (will need testing for completing steps)
 
 WIP - prolific basic auto survey bot
 WIP - prolific deep learning
