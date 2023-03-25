@@ -15,9 +15,8 @@ from configs import prolificinfo
 
 
 
-if os.name == 'posix':  # Unix/Linux/MacOS
-    os.system('clear')
 
+os.system('cls')
 #to use auto sign in make another .py named prolificinfo.py then put website1_user and pass in there
 
 #setup with user files

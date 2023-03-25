@@ -4,10 +4,8 @@ from extra import mailpresets
 import subprocess
 
 
-if os.name == 'posix':  # Unix/Linux/MacOS
-    os.system('clear')
 
-
+os.system('cls')
 mailai = input("Would you like to use ai to write your email?: "
                "\n [1] Y"
                "\n [2] N"

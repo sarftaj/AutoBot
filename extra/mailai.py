@@ -19,7 +19,7 @@ from extra import mailpresets
 import tkinter as tk
 
 #google app password
-
+os.system('cls')
 password = "zkwrayxvlojysbdz"
 print("make sure your app password matches - ", password)
 
@@ -48,9 +48,9 @@ t = threading.Thread(target=animate)
 t.start()
 
 # long process here
-time.sleep(5)
+time.sleep(3)
 done = True
-print("SUCCESS... WELCOME TO AI MAIL: ")
+print("")
 print("---------------------------------------------------------------------")
 
 #paths for google
