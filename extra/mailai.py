@@ -86,6 +86,10 @@ time.sleep(15)
 driver5 = driver.find_element("xpath", value='//*[@id="generatedCommands"]/div[1]/div[2]/button[1]').click()
 root = tk.Tk()
 prompt = root.clipboard_get()
+
+
+
+
 print(prompt)
 
 

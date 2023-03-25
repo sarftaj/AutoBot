@@ -20,7 +20,7 @@ os.system('cls')
 #to use auto sign in make another .py named prolificinfo.py then put website1_user and pass in there
 
 #setup with user files
-ser = Service(r"D:\chromedriver.exe")
+ser = Service(r"D:\Auto\extra\chromedriver.exe")
 op = webdriver.ChromeOptions()
 driver = webdriver.Chrome(service=ser, options=op)
 
@@ -84,6 +84,7 @@ if lookforsurveymain == "1":
 
 
 
+
 print("---------------------------------------------------------------------")
 if lookforsurveymain == "2":
     print("moving on...")
@@ -92,10 +93,9 @@ print("---------------------------------------------------------------------")
 
 
 #goes to highest to lowest
-preset1 = input(""""Which preset for study?
-[1] - Reward (Highest to lowest)
-[2] - Time (shortest to longest)
-[3] - Neither
+#preset1 = input(""""Which preset for study?
+#[1] - Reward (Highest to lowest)
+##[3] - Neither
 
 """)
 
@@ -112,7 +112,7 @@ if preset1 == "2":
     print("WIP")
 
 
-
+"""
 #finds best study in the main menu
 def get_score(title):
     """Computes a score for a survey title."""
@@ -138,9 +138,9 @@ for study_elem in soup.find('div', class_="tags"):
 
         #starting survey (need to test)
         botinput = input("Do script for this survey [1] yes [2] no: ")
-        #star survey path
+        if botinput == "1":
+            script1 = driver.find_element("xpath", value='//*[@id="app"]/div[2]/div/div/div/div/div[2]/div[1]/div[3]/button').click()
 
-        #needs fully fixed
 
 
 
