@@ -9,7 +9,7 @@ import sys
 c = input("Which website would you like to use: (ENTER NUMBER FOR SELECTION) "
            "\n 1.Prolific "
            "\n 2.Youtube Auto Farmer "
-           "\n 3.Mail Spammer "
+           "\n 3.WIP "
            "\n 4.Swagbucks"
            "\n 5. PAGE 2              "       
            "\n PUT NUMBER HERE: ")
@@ -28,9 +28,9 @@ if c == "2":
     "---------------------------------------------------------------------"
     subprocess.run(["python", "D:\Auto\configs\config1-youtube.py"])
 if c == "3":
-    print("Welcome to the mail spammer")
+    print("WIP")
     "---------------------------------------------------------------------"
-    subprocess.run(["python", "D:\Auto\configs\mail.py"])
+    subprocess.run(["python", "PATH"])
 if c == "4":
     print("Welcome to swagbucks script")
     print("---------------------------------------------------------------------")

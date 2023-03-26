@@ -69,11 +69,20 @@ if lookforsurveymain == "1":
     lookforsurvey = driver.find_element("xpath", value='//*[@id="app"]/div[2]/div[2]/div/div/section[1]').is_displayed()
     if lookforsurvey == True:
         print ("---------------------------------------------------------------------")
-        lookforsur = input("is study not started yet (does it not show confirm) [1] y [2] n : ")
+        lookforsur = input("Start Study? [1] y [2] n :  ")
         if lookforsur == "1":
             #remap keys for error fix #1 *(already in survey when website loaded)
-            start4 = driver.find_element("xpath", value='//*[@id="app"]/div[2]/div[2]/div/div/section[2]/div/div[4]/button[4]').click()
-            start6 = driver.find_element ("xpath", value='//*[@id="app"]/div[2]/div[2]/div/div/section[2]/div/div[3]/button[4]').click()
+            driver.implicitly_wait (self=6)
+            start4 = driver.find_element("xpath", value='//*[@id="app"]/div[2]/div/div/div/section[2]/div/div[3]/div/form/button').click()
+            driver.implicitly_wait(self=6)
+            start6 = driver.find_element ("xpath", value='/html/body/div[6]/div[2]/section/header/button').click()
+            driver.implicitly_wait (self=6)
+            start7 = driver.find_element("xpath", value='//*[@id="app"]/div[2]/div/div/div/section[2]/div/div[3]/button[4]').click()
+            driver.implicitly_wait (self=6)
+            start8 = driver.find_element("xpath", value='/html/body/div[6]/div[2]/section/div/label/span/input').click()
+            driver.implicitly_wait (self=6)
+            start9 = driver.find_element("xpath", value='/html/body/div[6]/div[2]/section/footer/a').click()
+
             #needs finished (start study)
 
 
@@ -140,8 +149,10 @@ for study_elem in soup.find('div', class_="tags"):
         botinput = input("Do script for this survey [1] yes [2] no: ")
         if botinput == "1":
             script1 = driver.find_element("xpath", value='//*[@id="app"]/div[2]/div/div/div/div/div[2]/div[1]/div[3]/button').click()
-
-
+            script2 = driver.find_element("xpath", value='//*[@id="app"]/div[2]/div/div/div/section[2]/div/div[4]/div/form/button').click()
+            script3 = driver.find_element("xpath", value='/html/body/div[6]/div[2]/section/div/label/span/input').click()
+            script4 = driver.find_element("xpath", value='/html/body/div[6]/div[2]/section/footer/a').click()
+            print("Study Starting now...")
 
 
 
