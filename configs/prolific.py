@@ -29,7 +29,7 @@ driver = webdriver.Chrome(service=ser, options=op)
 driver.get("https://internal-api.prolific.co/auth/accounts/login/")
 
 
-#user driver
+#user element
 user = driver.find_element(by="xpath", value='//*[@id="id_username"]')
 user.click()
 
@@ -42,8 +42,8 @@ password.click()
 password.send_keys(prolificinfo.website1_pass)
 
 #click login
-click1 = driver.find_element(by="xpath", value='//*[@id="login"]')
-click1.click()
+click7 = driver.find_element(by="xpath", value='//*[@id="login"]')
+click7.click()
 
 
 print("Logged In, process will start soon...")
