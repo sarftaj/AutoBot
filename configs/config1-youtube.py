@@ -3,28 +3,33 @@ import os
 from moviepy.editor import *
 import time
 import cons
-import AudioConverter 
-
-def cls():
-    os.system('cls' if os.name == 'nt' else 'clear')
-
-#print screen
-
+import AudioConverter
 print("-------------------------------")
 print("Welcome to Youtube Downloader!")
-
 url = input("Youtube URL: ")
 my_video = YouTube(url)
-
 print("***********Video Title************")
 print(my_video.title)
 print("-------------------------------")
 
+my_video_quest = input("""
+Download Resolution: 
+Highest - 1
+Lowest - 2
 
 
+: """)
+
+if my_video_quest == "1":
+    my_video = my_video.streams.get_highest_resolution()
+    my_video.download ("D:\Auto\downloadvideos")
+    print("your mp4 file will be downloaded in the folder downloadvideos")
 
 
-my_video = my_video.streams.get_highest_resolution()
+if my_video_quest == "2":
+    my_video_low = my_video .streams.get_lowest_resolution()
+    my_video.download("D:\Auto\downloadvideos")
+    print("your mp4 file will be downloaded in the folder downloadvideos")
 
 # my_video = my_video.streams.first()
 print("your mp4 file will be downloaded in the folder downloadvideos")

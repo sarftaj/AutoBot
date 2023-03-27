@@ -27,6 +27,16 @@ driver = webdriver.Chrome(service=ser, options=op)
 
 #website url
 driver.get("https://internal-api.prolific.co/auth/accounts/login/")
+#get cookie for login for faster access
+
+
+
+
+
+
+
+
+
 
 
 #user element
